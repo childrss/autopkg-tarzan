@@ -9,7 +9,7 @@
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>global_free/audacity</string>
 		<key>NAME</key>
-		<string>audacity</string>
+		<string>Audacity</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -26,6 +26,23 @@
 			<string>usage: managed/optional_installs, managed_updates
 other info:
 source: AutoPkg (com.github.timsutton.munki.audacity)</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.timsutton.munki.audacity</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.timsutton.munki.audacity</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.timsutton-recipes/Audacity/Audacity.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>f718c765c87d33385c21aa0f94b869306826d4c3f0744e39907aae134355744e</string>
+			</dict>
 		</dict>
 	</dict>
 </dict>
