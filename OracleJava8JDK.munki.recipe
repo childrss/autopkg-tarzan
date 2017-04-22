@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.OracleJava8JDK</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/oracle/java_8_jdk</string>
+		<key>NAME</key>
+		<string>oracle_java_8_jdk</string>
+		<key>ORACLE_LICENSE_COOKIE</key>
+		<string>oraclelicense=accept-securebackup-cookie</string>
+		<key>pkginfo</key>
+		<dict>
+<!-- 
+			<key>blocking_applications</key>
+			<array>
+				<string>Firefox</string>
+				<string>Firefox-Beta</string>
+				<string>Firefox-ESR</string>
+				<string>Opera</string>
+				<string>Safari</string>
+			</array>
+ -->
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Web, Cloud</string>
+			<key>description</key>
+			<string>Java web browser plug-in and development environment.</string>
+			<key>developer</key>
+			<string>Oracle</string>
+			<key>display_name</key>
+			<string>Oracle Java 8 JDK</string>
+			<key>icon_name</key>
+			<string>global/%NAME%</string>
+			<key>installer_choices_xml</key>
+			<array>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>1</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>choice0</string>
+				</dict>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>0</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>choice1</string>
+				</dict>
+			</array>
+			<key>minimum_os_version</key>
+			<string>10.8.3</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info: this pkginfo only installs the JDK component but it also requires the JRE pkginfo separately; this separation makes things more modular and leads to a cleaner uninstallation process
+source: AutoPkg (com.github.nmcspadden.OracleJava8JDK.munki)
+manual edits: comment out com.oracle.jre receipt</string>
+			<key>requires</key>
+			<array>
+				<string>oracle_java_8</string>
+			</array>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.nmcspadden.OracleJava8JDK.munki</string>
+</dict>
+</plist>

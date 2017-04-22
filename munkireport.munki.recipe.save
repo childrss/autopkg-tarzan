@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.munkireport</string>
+	<key>Input</key>
+	<dict>
+		<key>BASEURL</key>
+                <string>http://munkireports.admin.illinois.edu/report</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/munkireport/swanlund</string>
+		<key>NAME</key>
+		<string>munkireport-baseinstall-swanlund</string>
+		<key>modules</key>
+		<array/>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>description</key>
+			<string>Munkireport is a reporting tool.  This version links to the Swanlund Munkireport server, but in addition requires a business-unit specific installer.</string>
+			<key>display_name</key>
+			<string>Munkireport Base Install - Swanlund</string>
+			<key>category</key>
+			<string>Endpoint Management, Reporting</string>
+			<key>developer</key>
+			<string></string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>icon_name</key>
+			<string>global/munkireport.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.munkireport.autopkg.munki</string>
+</dict>
+</plist>

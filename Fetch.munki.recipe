@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Fetch</string>
+	<key>Input</key>
+	<dict>
+		<key>APP_DESTINATION</key>
+		<string>/Applications</string>
+		<key>BUNDLEID</key>
+		<string>com.fetchsoftworks.Fetch</string>
+		<key>DOWNLOAD_URL</key>
+		<string>http://www.fetchsoftworks.com</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/fetch_softworks/fetch</string>
+		<key>NAME</key>
+		<string>fetch</string>
+		<key>REGISTRANTNAME</key>
+		<string></string>
+		<key>SEARCH_PATTERN</key>
+		<string>[^"]+\.dmg[^"]*</string>
+		<key>SERIALNUMBER</key>
+		<string></string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Web, Cloud</string>
+			<key>description</key>
+			<string>Fetch is a full-featured FTP, SFTP and FTPS (FTP with TLS/SSL) client with a simple and easy-to-use interface.</string>
+			<key>developer</key>
+			<string>Fetch Softworks</string>
+			<key>display_name</key>
+			<string>Fetch</string>
+			<key>icon_name</key>
+			<string>global/fetch.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed_updates (use "fetch_license" in managed_installs/optional_installs
+other info: 
+source: AutoPkg (com.github.jleggat.Fetch.munki)
+manual edits: add installs key</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jleggat.Fetch.munki</string>
+</dict>
+</plist>

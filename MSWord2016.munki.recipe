@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MSWord2016</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/microsoft/office2016</string>
+		<key>NAME</key>
+		<string>microsoft_word_2016_update</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Microsoft, Productivity</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed_updates
+other info:
+source: AutoPkg (com.github.autopkg.munki.MSWord2016)</string>
+			<key>icon_name</key>
+			<string>global/microsoft_word_2016</string>
+			<key>update_for</key>
+			<array>
+				<string>microsoft_office_2016_vl</string>
+				<string>microsoft_office_2016_365</string>
+			</array>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.MSWord2016</string>
+</dict>
+</plist>

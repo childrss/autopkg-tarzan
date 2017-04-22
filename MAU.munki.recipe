@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MAU</string>
+	<key>Input</key>
+	<dict>
+		<key>CULTURE_CODE</key>
+		<string>0409</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/microsoft</string>
+		<key>NAME</key>
+		<string>MAU</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Microsoft Autoupdate</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.arubdesu.munki.MAU</string>
+</dict>
+</plist>

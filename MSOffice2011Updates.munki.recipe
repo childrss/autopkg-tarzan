@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MSOffice2011Updates</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/microsoft/office2011</string>
+		<key>NAME</key>
+		<string>microsoft_office_2011_update</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>RestartAction</key>
+			<string>RecommendRestart</string>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Microsoft, Productivity</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>icon_name</key>
+			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed_updates (use microsoft_office_2011_license in managed/optional_installs)
+other info: must be be installed after 14.1.0 SP/update
+source: AutoPkg (com.github.autopkg.munki.Office2011Updates)</string>
+			<key>requires</key>
+			<string>microsoft_office_2011_update-14.1.0</string>
+			<key>update_for</key>
+			<array>
+			  <string>microsoft_office_2011_license</string>
+			</array>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.Office2011Updates</string>
+</dict>
+</plist>

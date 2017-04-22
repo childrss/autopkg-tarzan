@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Rstudio</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/r_project</string>
+		<key>NAME</key>
+		<string>rstudio</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>R.app</string>
+				<string>RStudio.app</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Developer</string>
+			<key>description</key>
+			<string>RStudio is a set of integrated tools designed to help you be more productive with R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.</string>
+			<key>developer</key>
+			<string>RStudio</string>
+			<key>display_name</key>
+			<string>RStudio</string>
+			<key>icon_name</key>
+			<string>global/%NAME%.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info:
+source AutoPkg (com.github.joshua-d-miller.autopkg.munki.RStudio)</string>
+			<key>requires</key>
+			<array>
+				<string>r_project</string>
+			</array>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.joshua-d-miller.autopkg.munki.RStudio</string>
+</dict>
+</plist>

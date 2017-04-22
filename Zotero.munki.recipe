@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Zotero</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/roy_rosenzweig_chnm/zotero</string>
+		<key>NAME</key>
+		<string>zotero</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Firefox</string>
+				<string>Firefox-BETA</string>
+				<string>Firefox-ESR</string>
+				<string>Google Chrome</string>
+				<string>Opera</string>
+				<string>Safari</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Microsoft, Productivity</string>
+			<key>description</key>
+			<string>Zotero - zoh-TAIR-oh - is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. It lives right where you do your work-in the web browser itself.</string>
+			<key>developer</key>
+			<string>Roy Rosenzweig CHNM</string>
+			<key>display_name</key>
+			<string>Zotero (Standalone)</string>
+			<key>icon_name</key>
+			<string>global/zotero.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info:
+source: AutoPkg (com.github.joshua-d-miller.autopkg.munki.zotero)</string>
+<!-- 
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+            # Mircosoft Word 2011 Plugin for Zotero
+            # Last Updated April 10, 2014 - Joshua D. Miller
+            # Set Permissions to allow the Zotero Word Plugin to Install
+            if [ -e /Applications/Microsoft\ Office\ 2011/ ]; then
+				chmod -R o+w /Applications/Microsoft\ Office\ 2011/Office/Startup/Word
+			fi
+            </string>
+-->
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+					# Permissions change for Word 2011 template for Zotero
+					# Based on AutoPkg recipe by Joshua D. Miller (April 10, 2014)
+					# If the msword2011_config_enableinstallstartupitems fake receipt is present,
+					# set permissions to allow the Zotero Word 2011 template to install
+					if [ -e /Library/EPM/Apps/msword2011_config_enableinstallstartupitems.txt ]; then
+						if [ -e /Applications/Microsoft\ Office\ 2011/ ]; then
+							chmod o+w /Applications/Microsoft\ Office\ 2011/Office/Startup/Word
+						fi
+					fi
+			</string>
+<!--
+			<key>postuninstall_script</key>
+			<string>#!/bin/bash
+            # Uninstall Script for Word Plugin for Zotero
+            # Last Updated April 10, 2014 - Joshua D. Miller
+            # Remove the Zotero Template file
+            if [ -e /Applications/Microsoft\ Office\ 2011/Office/Word/Startup/Zotero.dot ]; then
+				rm /Applications/Microsoft\ Office\ 2011/Office/Startup/Word/Zotero.dot
+			fi
+            # Restore Permissions on the folder /Applications/Microsoft Office 2011/Office/Startup/Word/
+            if [ -e /Applications/Microsoft\ Office\ 2011/ ]; then
+            	chmod -R o-w /Applications/Microsoft\ Office\ 2011/Office/Startup/Word
+			fi
+            </string>
+ -->
+			<key>postuninstall_script</key>
+			<string>#!/bin/bash
+					# Uninstall Script for Word Plugin for Zotero
+					# Based on AutoPkg recipe by Joshua D. Miller (April 10, 2014)
+					# Remove the Zotero Template file for Word 2011, if present.
+					if [ -e /Applications/Microsoft\ Office\ 2011/Office/Word/Startup/Zotero.dot ]; then
+						rm /Applications/Microsoft\ Office\ 2011/Office/Startup/Word/Zotero.dot
+					fi
+			</string>
+<!-- 
+			<key>unattended_install</key>
+			<true/>
+ -->
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.joshua-d-miller.autopkg.munki.zotero</string>
+</dict>
+</plist>

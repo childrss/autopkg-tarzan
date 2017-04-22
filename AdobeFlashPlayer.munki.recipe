@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.AdobeFlashPlayer</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/adobe/flashplayer</string>
+		<key>NAME</key>
+		<string>adobe_flash_player</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Firefox</string>
+				<string>Firefox-Beta</string>
+				<string>Firefox-ESR</string>
+				<string>Opera</string>
+				<string>Safari</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Adobe, Design, Media</string>
+			<key>description</key>
+			<string>Adobe® Flash® Player is a cross-platform browser-based application runtime that delivers uncompromised viewing of expressive applications, content, and videos across screens and browsers.</string>
+			<key>developer</key>
+			<string>Adobe</string>
+			<key>icon_name</key>
+			<string>global/%NAME%</string>
+			<key>minimum_os_version</key>
+			<string>10.6</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info: Official minimum required OS version is 10.9, but seems to install fine on 10.8.
+source: AutoPkg (com.github.autopkg.munki.FlashPlayerNoRepackage)</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.FlashPlayerNoRepackage</string>
+</dict>
+</plist>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.OpenOffice</string>
+	<key>Input</key>
+	<dict>
+		<key>LANGUAGE</key>
+		<string>en-US</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Office</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/open_office</string>
+		<key>NAME</key>
+		<string>openoffice</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Microsoft, Productivity</string>
+			<key>description</key>
+			<string>Apache OpenOffice is the leading open-source office software suite for word processing, spreadsheets, presentations, graphics, databases and more.</string>
+			<key>developer</key>
+			<string>The Apache Software Foundation</string>
+			<key>display_name</key>
+			<string>Open Office</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>icon_name</key>
+			<string>global/%NAME%.png</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>io.github.hjuutilainen.munki.OpenOffice</string>
+</dict>
+</plist>

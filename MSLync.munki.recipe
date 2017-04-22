@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.MSLync</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/microsoft/lync</string>
+		<key>NAME</key>
+		<string>microsoft_lync</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Microsoft, Productivity</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>display_name</key>
+			<string>Microsoft Lync</string>
+			<key>icon_name</key>
+			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>ParentRecipe</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info:
+source: AutoPkg (com.github.arubdesu.munki.LyncInstaller)
+manual edits: add installs key, change display_name to "Microsoft Lync"</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.arubdesu.munki.LyncInstaller</string>
+</dict>
+</plist>

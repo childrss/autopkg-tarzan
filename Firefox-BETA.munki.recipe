@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Firefox</string>
+	<key>Input</key>
+	<dict>
+		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+		<false/>
+		<key>LOCALE</key>
+		<string>en-US</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/mozilla/firefox</string>
+		<key>NAME</key>
+		<string>firefox_beta</string>
+		<key>RELEASE</key>
+		<string>beta-latest</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Web, Cloud</string>
+			<key>developer</key>
+			<string>Mozilla</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info:
+source: AutoPkg (com.github.autopkg.munki.firefox-rc-en_US)
+manual edits: installs key change type to 'bundle', version_comparison_key = CFBundleVersion, add expanded version of CFBundleVersion to version number in filename (make into a 12-digit number) and in version key, installs key path needs to be: "/Applications/Firefox-BETA.app"</string>
+			<key>icon_name</key>
+			<string>global/%NAME%.png</string>
+			<key>description</key>
+			<string>Lastest BETA version of Mozilla Firefox:  a free and open source web browser.</string>
+			<key>display_name</key>
+			<string>Mozilla Firefox BETA</string>
+            <key>items_to_copy</key> 
+            <array> 
+                <dict> 
+                  <key>destination_item</key> 
+                  <string>Firefox-BETA.app</string> 
+                  <key>destination_path</key> 
+                  <string>/Applications</string> 
+                  <key>source_item</key> 
+                  <string>Firefox.app</string> 
+                </dict> 
+            </array> 
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+
+					# If firefox_config_disableupdates has been installed, make sure to reinstall the config files.
+					# The local admin can immediately and persistently override the default configuration by
+					#   (1) creating their own override.cfg file at these paths:
+					#     /Applications/Firefox.app/Contents/Resources/override.cfg
+					#     /Library/EPM/Apps/firefox_config_disableupdates/autoconfig-override/override.cfg
+					#   AND
+					#   (2) replacing the standard autoconfig.js file with the version required for the override:
+					#	  /bin/cp /Library/EPM/Apps/firefox_config_disableupdates/autoconfig-override/autoconfig.js /Applications/Firefox.app/Contents/Resources/defaults/pref
+					# See this site for basic information on how this configuration process works:
+					#   https://developer.mozilla.org/en-US/Firefox/Enterprise_deployment
+
+					if [ -f /Library/EPM/Apps/firefox_config_disableupdates/autoconfig-override/override.cfg ]; then
+						/bin/cp /Library/EPM/Apps/firefox_config_disableupdates/autoconfig-override/override.cfg /Applications/Firefox-BETA.app/Contents/Resources
+						/bin/cp /Library/EPM/Apps/firefox_config_disableupdates/autoconfig-override/autoconfig.js /Applications/Firefox-BETA.app/Contents/Resources/defaults/pref
+					elif [ -f /Library/EPM/Apps/firefox_config_disableupdates/autoconfig-default/mozilla.cfg ]; then
+						/bin/cp /Library/EPM/Apps/firefox_config_disableupdates/autoconfig-default/mozilla.cfg /Applications/Firefox-BETA.app/Contents/Resources
+						/bin/cp /Library/EPM/Apps/firefox_config_disableupdates/autoconfig-default/autoconfig.js /Applications/Firefox-BETA.app/Contents/Resources/defaults/pref			
+					fi
+	
+					exit 0
+			</string>
+			<key>additional_makepkginfo_options</key>
+				<array>
+					<string>--file=/Applications/Firefox-BETA.app</string>
+				</array>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.firefox-rc-en_US</string>
+</dict>
+</plist>

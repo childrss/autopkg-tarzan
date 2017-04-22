@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.mactex</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/mactex</string>
+		<key>NAME</key>
+		<string>mactex</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Developer</string>
+			<key>description</key>
+			<string>MacTeX is a redistribution of TeX Live, a typesetting environment. While TeX Live is designed to be cross-platform (running on Unix, Mac OS X, and Windows), MacTeX includes Mac-specific utilities and front-ends.</string>
+			<key>developer</key>
+			<string>MacTeX TeXnical working group</string>
+			<key>icon_name</key>
+			<string>global/%NAME%.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info:
+source: AutoPkg (com.github.joshua-d-miller.autopkg.munki.MacTeX)
+manual edits: check minimum_os_version, make sure uninstalls cleanly/update postuninstall_script</string>
+			<key>postuninstall_script</key>
+			<string>#!/bin/bash
+					# Remove what's left.
+					/bin/rm -rf /Applications/TeX
+			</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.joshua-d-miller.autopkg.munki.MacTeX</string>
+</dict>
+</plist>

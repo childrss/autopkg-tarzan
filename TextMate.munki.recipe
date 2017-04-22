@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.TextMate</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/textmate</string>
+		<key>NAME</key>
+		<string>textmate</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Developer</string>
+			<key>developer</key>
+			<string>MacroMates Ltd.</string>
+			<key>display_name</key>
+			<string>TextMate</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>icon_name</key>
+			<string>global/%NAME%</string>
+			<key>minimum_os_version</key>
+			<string>10.5</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.TextMate</string>
+</dict>
+</plist>

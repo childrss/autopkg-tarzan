@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.OracleJava8</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/oracle/java_8</string>
+		<key>NAME</key>
+		<string>oracle_java_8</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Firefox</string>
+				<string>Firefox-Beta</string>
+				<string>Firefox-ESR</string>
+				<string>Opera</string>
+				<string>Safari</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Web, Cloud</string>
+			<key>description</key>
+			<string>Java web browser plug-in.</string>
+			<key>developer</key>
+			<string>Oracle</string>
+			<key>display_name</key>
+			<string>Oracle Java 8 JRE</string>
+			<key>icon_name</key>
+			<string>global/%NAME%</string>
+			<key>minimum_os_version</key>
+			<string>10.8.3</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+		other info: 
+		source: AutoPkg (com.github.autopkg.munki.OracleJava8)</string>
+			<key>postuninstall_script</key>
+			<string>#!/bin/sh
+		/bin/rm -rf /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+			</string>
+			<key>update_for</key>
+			<array>
+				<string>oracle_java_8_jdk</string>
+			</array>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.OracleJava8</string>
+</dict>
+</plist>

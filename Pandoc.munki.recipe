@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Pandoc</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_CATEGORY</key>
+		<string>Developer</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/pandoc.org</string>
+		<key>NAME</key>
+		<string>pandoc</string>
+		<key>SEARCH_PATTERN</key>
+		<string>(?P&lt;url&gt;/jgm/pandoc/releases/download/(?P&lt;version&gt;.*?)/pandoc-.*?.pkg)</string>
+		<key>SEARCH_URL</key>
+		<string>https://github.com/jgm/pandoc/releases</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>&lt;html&gt;&lt;p&gt;Command-line tool. A universal document converter. If you need to convert files from one markup format into another, pandoc is your swiss-army knife. &lt;a href="http://pandoc.org/index.html" target="_blank"&gt;http://pandoc.org/index.html&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</string>
+			<key>developer</key>
+			<string>pandoc.org</string>
+			<key>display_name</key>
+			<string>Pandoc</string>
+			<key>icon_name</key>
+			<string>global_free/generic_cl_tool.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info: This is a command-line tool that installs in /usr/local/bin.
+source: AutoPkg (com.github.jleggat.munki.pandoc)
+manual edits: installs key, version number</string>
+<!-- 
+			<key>unattended_install</key>
+			<true/>
+ -->
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.jleggat.munki.pandoc</string>
+</dict>
+</plist>

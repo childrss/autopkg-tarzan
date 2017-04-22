@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Silverlight</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>http://www.microsoft.com/getsilverlight/handlers/getsilverlight.ashx</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/microsoft/silverlight</string>
+		<key>NAME</key>
+		<string>microsoft_silverlight</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Safari</string>
+				<string>Firefox</string>
+				<string>Firefox-Beta</string>
+				<string>Firefox-ESR</string>
+				<string>Opera</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Microsoft, Productivity</string>
+			<key>description</key>
+			<string>Silverlight is a free plug-in, powered by the .NET framework and compatible with multiple browsers, devices and operating systems, bringing a new level of interactivity wherever the Web works.</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>display_name</key>
+			<string>Microsoft Silverlight</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>icon_name</key>
+			<string>global/%NAME%</string>
+			<key>minimum_os_version</key>
+			<string>10.7</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info: only supported on 10.7+ since early 2014: https://www.microsoft.com/getsilverlight/locale/en-us/html/installation-win-SL5.html
+source: AutoPkg (com.github.autopkg.munki.Silverlight)</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.Silverlight</string>
+</dict>
+</plist>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.AdobeAcrobatDCUpdate</string>
+	<key>Input</key>
+	<dict>
+		<key>LANGUAGE</key>
+		<string>English</string>
+		<key>MAJOR_VERSION</key>
+		<string>AcrobatDC</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/adobe/acrobatpro/dc</string>
+		<key>NAME</key>
+		<string>adobe_acrobat_dc_update</string>
+		<key>OS_VERSION</key>
+		<string>10.9.0</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>Adobe Acrobat</string>
+				<string>Adobe Acrobat Pro</string>
+				<string>Distiller</string>
+				<string>Firefox</string>
+				<string>Microsoft Word</string>
+				<string>Safari</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>category</key>
+			<string>Adobe, Design, Media</string>
+			<key>description</key>
+			<string>This update provides system requirement enhancements, mitigation for security issues, improved overall stability, bug fixes, and feature enhancements. For a list of specific bug fixes, new features, and other changes in this release, see the Release Notes. Continuous Track.</string>
+			<key>developer</key>
+			<string>Adobe</string>
+			<key>display_name</key>
+			<string>Adobe Acrobat DC (Continuous) Update</string>
+			<key>icon_name</key>
+			<string>global/adobe_acrobat_pro_dc.png</string>
+			<key>minimum_os_version</key>
+			<string>10.9</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed_updates (use adobe_acrobat_dc in managed/optional_installs)
+other info:
+source: AutoPkg (com.github.joshua-d-miller.autopkg.munki.AdobeAcrobatDCUpdate)
+manual edits: installs key type = bundle (to distinguish from older major versions)</string>
+			<key>update_for</key>
+			<array>
+				<string>adobe_acrobat_dc</string>
+			</array>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.joshua-d-miller.autopkg.munki.AdobeAcrobatDCUpdate</string>
+</dict>
+</plist>

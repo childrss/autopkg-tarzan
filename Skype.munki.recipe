@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Skype</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>global_free/microsoft/skype</string>
+		<key>NAME</key>
+		<string>microsoft_skype</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>global_free_raw</string>
+			</array>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>category</key>
+			<string>Microsoft, Productivity</string>
+			<key>developer</key>
+			<string>Microsoft</string>
+			<key>description</key>
+			<string>Voice Over IP (VOIP) and chat client</string>
+			<key>display_name</key>
+			<string>Microsoft Skype</string>
+			<key>icon_name</key>
+			<string>global/%NAME%</string>
+			<key>notes</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info:
+source: AutoPkg (com.github.autopkg.munki.Skype)</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.Skype</string>
+</dict>
+</plist>
