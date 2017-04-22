@@ -22,15 +22,41 @@
 			<string>MacroMates Ltd.</string>
 			<key>display_name</key>
 			<string>TextMate</string>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
 			<key>minimum_os_version</key>
 			<string>10.5</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.munki.TextMate</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.TextMate</key>
+			<dict>
+				<key>git_hash</key>
+				<string>8dda1b67b07e8ae6359babfcdabd126707d3fc8a</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/TextMate/TextMate.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>d1021fc6a05fe05638526aa503627f71e5908e431bcd29e736279ec4b0852e0e</string>
+			</dict>
+			<key>com.github.autopkg.munki.TextMate</key>
+			<dict>
+				<key>git_hash</key>
+				<string>89f7fe68b5e50e2d3fc033a1b81d468e1aa9d7a7</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/TextMate/TextMate.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>7766e922ff63517409b791f2ad5a2530e58f2f8f3d6da33088a616d0543e0648</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

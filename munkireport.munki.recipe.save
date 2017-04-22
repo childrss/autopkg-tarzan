@@ -7,7 +7,7 @@
 	<key>Input</key>
 	<dict>
 		<key>BASEURL</key>
-                <string>http://munkireports.admin.illinois.edu/report</string>
+		<string>http://munkireports.admin.illinois.edu/report</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>global_free/munkireport/swanlund</string>
 		<key>NAME</key>
@@ -20,16 +20,14 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>description</key>
-			<string>Munkireport is a reporting tool.  This version links to the Swanlund Munkireport server, but in addition requires a business-unit specific installer.</string>
-			<key>display_name</key>
-			<string>Munkireport Base Install - Swanlund</string>
 			<key>category</key>
 			<string>Endpoint Management, Reporting</string>
+			<key>description</key>
+			<string>Munkireport is a reporting tool.  This version links to the Swanlund Munkireport server, but in addition requires a business-unit specific installer.</string>
 			<key>developer</key>
 			<string></string>
-			<key>name</key>
-			<string>%NAME%</string>
+			<key>display_name</key>
+			<string>Munkireport Base Install - Swanlund</string>
 			<key>icon_name</key>
 			<string>global/munkireport.png</string>
 			<key>name</key>
@@ -40,5 +38,42 @@
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.munkireport.autopkg.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>MunkiReportPackager</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.munkireport-recipes/MunkiReportPackager.py</string>
+				<key>sha256_hash</key>
+				<string>13c054c49874e701c9382a4537ff693bc3fdc9a5a56707c042cc6ff07f5f1f11</string>
+			</dict>
+			<key>MunkiReportUrlCreator</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.munkireport-recipes/MunkiReportUrlCreator.py</string>
+				<key>sha256_hash</key>
+				<string>abaf3b2c246274617c2dd6065bce7ad7abc29a33be124f3ab05ae6d7e8ae4561</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.munkireport.autopkg.munki</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.munkireport-recipes/munkireport.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>cf065010c260f40075a882f5d46bbfa5d1828e6860ad27bbbb646aa3264f5613</string>
+			</dict>
+			<key>com.github.munkireport.autopkg.pkg</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.munkireport-recipes/munkireport.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>3bd7c98def478cefe4fc95cd2e84e1bc79449ca0f64456b027ece62042024203</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

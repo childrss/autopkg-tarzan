@@ -31,6 +31,8 @@
 			<string>R Project</string>
 			<key>display_name</key>
 			<string>R</string>
+			<key>icon_name</key>
+			<string>global/%NAME%.png</string>
 			<key>minimum_os_version</key>
 			<string>10.9</string>
 			<key>name</key>
@@ -39,11 +41,31 @@
 			<string>usage: managed/optional_installs, managed_updates
 other info: 
 source: AutoPkg (io.github.hjuutilainen.munki.R)</string>
-			<key>icon_name</key>
-			<string>global/%NAME%.png</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.munki.R</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>io.github.hjuutilainen.download.R</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/R/R.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>92313d41526a8149917a57fee1208bb37485b4dc77f7b29c022144d85f857b18</string>
+			</dict>
+			<key>io.github.hjuutilainen.munki.R</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/R/R.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>8f78709f41dea3e6c964e45d663cad6f0cd37d355b4bed571b88f986019198bd</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

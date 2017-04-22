@@ -16,13 +16,35 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.SiteSucker.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.SiteSucker.download</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/SiteSucker/SiteSucker.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>6004002a312aa587d4852b9c0d304a6cf1bc3028f43b587cf5992944b6bb7aea</string>
+			</dict>
+			<key>com.github.jleggat.SiteSucker.munki</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/SiteSucker/SiteSucker.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>b615f7681da9a8bfca813fb77c7ad6c5e7a93ec74a7aba7e425802c12e73d4b1</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

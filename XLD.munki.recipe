@@ -16,13 +16,30 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.munki.XLD</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.munki.XLD</key>
+			<dict>
+				<key>git_hash</key>
+				<string>e9fd841d100d01a4c30c6ecd4b7cc5f2eb42021e</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/XLD/XLD.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>6cb8a7a34e0235fdf3bb68ca34d99cfdf8d619fa51e6390f84a938ef0c6c69ce</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -26,5 +26,28 @@
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.arubdesu.munki.MAU</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>MAUURLandUpdateInfoProvider</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.arubdesu-recipes/MSMAU/MAUURLandUpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>6621aac4c34fa17ab4c7143298e302731ce6a206138c8ec3e55913462b5f4135</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.arubdesu.munki.MAU</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.arubdesu-recipes/MSMAU/MAU.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>36c4bf254c884ca9e50257b4e941435ad36c575d1ef83093b679879b660bb1cf</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

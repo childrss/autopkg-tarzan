@@ -12,6 +12,11 @@
 		<string>microsoft_lync</string>
 		<key>pkginfo</key>
 		<dict>
+			<key>ParentRecipe</key>
+			<string>usage: managed/optional_installs, managed_updates
+other info:
+source: AutoPkg (com.github.arubdesu.munki.LyncInstaller)
+manual edits: add installs key, change display_name to "Microsoft Lync"</string>
 			<key>catalogs</key>
 			<array>
 				<string>global_free_raw</string>
@@ -26,14 +31,32 @@
 			<string>global/%NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
-			<key>ParentRecipe</key>
-			<string>usage: managed/optional_installs, managed_updates
-other info:
-source: AutoPkg (com.github.arubdesu.munki.LyncInstaller)
-manual edits: add installs key, change display_name to "Microsoft Lync"</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.arubdesu.munki.LyncInstaller</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>MSLyncURLandUpdateInfoProvider</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.arubdesu-recipes/MSLync/MSLyncURLandUpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>43e8328fa234f97d981d4d28ccc7b590772b5aeb03f08bb084938ad39da90e67</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.arubdesu.munki.LyncInstaller</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.arubdesu-recipes/MSLync/MSLync.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>722b58646b844581bcd9cd523ef32a26a42b09fc954f0d2c0dcbf1b38336bd7e</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

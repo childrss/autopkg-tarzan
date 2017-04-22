@@ -42,5 +42,42 @@
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.Fetch.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>FetchScriptsPath</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Fetch/FetchScriptsPath.py</string>
+				<key>sha256_hash</key>
+				<string>b4d9e227754443058a700fd310dd06398adc79c2b3b4dab5a81dc41399b1d05b</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.Fetch.munki</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Fetch/Fetch.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>fc663450cc30b1eecbdfc17084517080b37c6a6cfe2f5e8f691edc837c423327</string>
+			</dict>
+			<key>com.github.jleggat.download.Fetch</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Fetch/Fetch.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>391aa5d6e7963245b76f6617e32c53ede3863ff1a89b19c93318f20d7b3796b3</string>
+			</dict>
+			<key>com.github.jleggat.pkg.Fetch</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Fetch/Fetch.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>56aad999a499f1aa319f6678038f932ab27d8449970a513e23bc2b3fbd727daf</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -16,13 +16,43 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/printer_driver.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.n8felton.munki.AppleSavinPrinterDrivers</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>com.github.n8felton.shared/AppleSupportDownloadInfoProvider</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.n8felton-recipes/SharedProcessors/AppleSupportDownloadInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>cb97c7d29684d437fd11fc5aa9781f5185659d1c0c78d1979b1c32d7f77d90e1</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.n8felton.download.AppleSavinPrinterDrivers</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.n8felton-recipes/ApplePrinterDrivers/AppleSavinPrinterDrivers.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>946dd28a203c57fe46bd69e2b8c10550697291f788a8f6fd4d759ad026ca7e9f</string>
+			</dict>
+			<key>com.github.n8felton.munki.AppleSavinPrinterDrivers</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.n8felton-recipes/ApplePrinterDrivers/AppleSavinPrinterDrivers.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>a540985ef6c4472e049cb3c5ba88228c21e85f4ccd98d29a0891ef17ce62359f</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -18,13 +18,35 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.Wireshark.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.Wireshark.download</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Wireshark/Wireshark.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>7dd9055a619ae45f0fc700210d33a5162557cd46edd1a5754da9d1ceb91ea26d</string>
+			</dict>
+			<key>com.github.jleggat.Wireshark.munki</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Wireshark/Wireshark.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>9651d5dd9a3fc513b050586f4a836a66dee8210a39a68fdced294d225181b162</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

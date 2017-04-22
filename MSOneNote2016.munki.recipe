@@ -20,14 +20,14 @@
 			<string>Microsoft, Productivity</string>
 			<key>developer</key>
 			<string>Microsoft</string>
+			<key>icon_name</key>
+			<string>global/microsoft_onenote_2016</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>notes</key>
 			<string>usage: managed_updates
 other info:
 source: AutoPkg (com.github.autopkg.munki.MSOneNote2016)</string>
-			<key>icon_name</key>
-			<string>global/microsoft_onenote_2016</string>
 			<key>update_for</key>
 			<array>
 				<string>microsoft_office_2016_vl</string>
@@ -37,5 +37,41 @@ source: AutoPkg (com.github.autopkg.munki.MSOneNote2016)</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.munki.MSOneNote2016</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>MSOffice2016URLandUpdateInfoProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>d959bb64d28f67fe1574eef46348f8d55b3456db</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOffice2016URLandUpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>cf74231b7434ec9178548256b98a08958e6db9b459c37d76a26952f4bcbc2cce</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.MSOneNote2016</key>
+			<dict>
+				<key>git_hash</key>
+				<string>78f96ee8a177b2ff6f15009de0c64a5b201d0097</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOneNote2016.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>89c26796a3efeec2a86d694a6342ea2ae3c87ed0bcf978a729812fe39c200dbe</string>
+			</dict>
+			<key>com.github.autopkg.munki.MSOneNote2016</key>
+			<dict>
+				<key>git_hash</key>
+				<string>d49d9febcf853d0809eb99c54cee83ca1ffac997</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOneNote2016.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>1df24704448a3f61cf434700c63c7e2f6f8af364037eb629b7b1249c5e232c68</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -16,13 +16,43 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/printer_driver.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.n8felton.munki.AppleFujiXeroxPrinterDrivers</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>com.github.n8felton.shared/AppleSupportDownloadInfoProvider</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.n8felton-recipes/SharedProcessors/AppleSupportDownloadInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>cb97c7d29684d437fd11fc5aa9781f5185659d1c0c78d1979b1c32d7f77d90e1</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.n8felton.download.AppleFujiXeroxPrinterDrivers</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.n8felton-recipes/ApplePrinterDrivers/AppleFujiXeroxPrinterDrivers.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>182925666bc139765286811f7f9b7cf03e1dc1ecb5b94605b34e1587a00f5c13</string>
+			</dict>
+			<key>com.github.n8felton.munki.AppleFujiXeroxPrinterDrivers</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.n8felton-recipes/ApplePrinterDrivers/AppleFujiXeroxPrinterDrivers.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>22c0ab0366fd6bab4a09efa97ad2d3b87cc38b93a5c9762ad29b085498f52f0b</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

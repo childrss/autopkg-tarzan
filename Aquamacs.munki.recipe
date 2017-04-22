@@ -38,5 +38,27 @@ source: AutoPkg (com.github.mkuron.munki.Aquamacs)</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.mkuron.munki.Aquamacs</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.hansen-m.download.aquamacs</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.hansen-m-recipes/Aquamacs/Aquamacs.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>4c57f3dce8d0dc5422b5c4d9c53aec1f6f676b1797fc3f72a48bfe75752b3081</string>
+			</dict>
+			<key>com.github.mkuron.munki.Aquamacs</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.mkuron.mkuron-recipes/Aquamacs.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>9800c36b984cea6327a69a12523c812b074c96caa6c0168c6f0e89d247cffcb3</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

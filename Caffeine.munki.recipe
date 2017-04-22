@@ -16,13 +16,35 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.Caffeine.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.keeleysam.recipes.Caffeine.download</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Caffeine/Caffeine.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>0f46f4d83d6c4ba54f7ca8a7406ead1ef8921a90b8444ab04693b1e84e050e64</string>
+			</dict>
+			<key>com.github.keeleysam.recipes.Caffeine.munki</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Caffeine/Caffeine.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>d13ae415c901de15d0a115f41e5c5b723eda1441e053a9a5062cdc2e20ca3584</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

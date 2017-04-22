@@ -16,13 +16,35 @@
 			<array>
 				<string>munkidev</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.munki.AutoPkgr</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.AutoPkgr</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/AutoPkgr/AutoPkgr.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>8f3d34e364953e9a4bf091110761be5d658007075f62e4f05178464169521831</string>
+			</dict>
+			<key>com.github.homebysix.munki.AutoPkgr</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/AutoPkgr/AutoPkgr.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>e99a12cfa730f0223db312208c2b74f111b21cbefdcecb12a88cf9e1c99ea4ae</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

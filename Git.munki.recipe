@@ -16,13 +16,35 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.Git.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.Git.download</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Git/Git.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1d9f17b95bbb4afd8f3011e13f7123bccc809d77fc305c54948c359bf6dd3811</string>
+			</dict>
+			<key>com.github.jleggat.Git.munki</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Git/Git.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>6af2c77af12b99ccfc8fe8f7c8ac15654b104f0e9d9dd049b21ec55d0b2bf795</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

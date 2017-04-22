@@ -14,16 +14,6 @@
 		<string>oraclelicense=accept-securebackup-cookie</string>
 		<key>pkginfo</key>
 		<dict>
-<!-- 
-			<key>blocking_applications</key>
-			<array>
-				<string>Firefox</string>
-				<string>Firefox-Beta</string>
-				<string>Firefox-ESR</string>
-				<string>Opera</string>
-				<string>Safari</string>
-			</array>
- -->
 			<key>catalogs</key>
 			<array>
 				<string>global_free_raw</string>
@@ -74,5 +64,27 @@ manual edits: comment out com.oracle.jre receipt</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.nmcspadden.OracleJava8JDK.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.hansen-m.download.OracleJava8JDK</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.hansen-m-recipes/Oracle/OracleJava8JDK.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c9e8186528d1faf8869d1716d1ed01e454e419734d59cbad976bd20c0fe20529</string>
+			</dict>
+			<key>com.github.nmcspadden.OracleJava8JDK.munki</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.nmcspadden-recipes/Oracle/OracleJava8JDK.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>ce6d399c5d13bf95083faf2b3ddb2af65b04cfc22c92930edd7700b7c1c6f2b6</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

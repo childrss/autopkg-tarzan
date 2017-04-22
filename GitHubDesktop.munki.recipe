@@ -16,10 +16,10 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 			<key>postinstall_script</key>
 			<string>#!/bin/bash
 
@@ -40,5 +40,27 @@ exit 0
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.munki.GitHubDesktop</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.GitHubDesktop</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/GitHub/GitHubDesktop.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>50735d222e090a79ecfc571d2644aeb19b3521ebf0919dfb796eff87b16bbd99</string>
+			</dict>
+			<key>com.github.homebysix.munki.GitHubDesktop</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/GitHub/GitHubDesktop.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>49a6d95a03401069cb62eb67286afb31bf6d02438b78d3e40d62e88a235a8391</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

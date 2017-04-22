@@ -16,13 +16,43 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/printer_driver.png</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.n8felton.munki.AppleCanonInkjetPrinterDrivers</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>com.github.n8felton.shared/AppleSupportDownloadInfoProvider</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.n8felton-recipes/SharedProcessors/AppleSupportDownloadInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>cb97c7d29684d437fd11fc5aa9781f5185659d1c0c78d1979b1c32d7f77d90e1</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.n8felton.download.AppleCanonInkjetPrinterDrivers</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.n8felton-recipes/ApplePrinterDrivers/AppleCanonInkjetPrinterDrivers.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>3a82faea6568e8fabfd432d903a0e12e055b66e7b61a1d57bf8feb9280dd06da</string>
+			</dict>
+			<key>com.github.n8felton.munki.AppleCanonInkjetPrinterDrivers</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.n8felton-recipes/ApplePrinterDrivers/AppleCanonInkjetPrinterDrivers.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>ad180107bb1925fd7bbdd4566d81b932ca78b4bded1e9be37fa971b20c4cd63e</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

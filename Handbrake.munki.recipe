@@ -16,13 +16,35 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.autopkg.munki.HandBrake</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.keeleysam.autopkg.download.HandBrake</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Handbrake/Handbrake.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1bb0ebfdb68638123c159879f4b3d008ca226feb63669c9daaff9355d917d196</string>
+			</dict>
+			<key>com.github.keeleysam.autopkg.munki.HandBrake</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Handbrake/Handbrake.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>d0446a2c18e4e50ae5eae99e345d5d3d267478ae7669005c6550dac5367fcee6</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

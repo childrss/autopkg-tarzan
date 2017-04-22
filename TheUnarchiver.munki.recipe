@@ -16,13 +16,39 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.munki.TheUnarchiver</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.TheUnarchiver</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ce9996b461d6d6a03a639fb37f49da4d5e6e03e5</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/The Unarchiver/TheUnarchiver.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>dee2e0c13b3f5e5446ec119c638be2792640794aaebbe55fb3005b5947d49682</string>
+			</dict>
+			<key>com.github.autopkg.munki.TheUnarchiver</key>
+			<dict>
+				<key>git_hash</key>
+				<string>3241629e0afa554fea7eeaf211b7e912ed75066b</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/The Unarchiver/TheUnarchiver.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>2060af1b31867a607da2cfee1001ed19e1cc7bb7ce195fe137c97790dd469c21</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

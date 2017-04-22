@@ -16,13 +16,35 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.pgAdmin3.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.pgAdmin3.download</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/pgAdmin3/pgAdmin3.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>e211327e466bee7218f08b67590a6b98afd0e1cdb9f2b43fcf02ab0e9fc589a0</string>
+			</dict>
+			<key>com.github.jleggat.pgAdmin3.munki</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/pgAdmin3/pgAdmin3.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>cd5965e24be7172abfa7283d1ab132af79dcafa3b809818ddbcc4497d8bff678</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

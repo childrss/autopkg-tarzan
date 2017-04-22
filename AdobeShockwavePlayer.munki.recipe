@@ -16,13 +16,43 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.AdobeShockwavePlayer.munki</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>AdobeShockwaveVersioner</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/AdobeShockwavePlayer/AdobeShockwaveVersioner.py</string>
+				<key>sha256_hash</key>
+				<string>965a931df38d724341304a59218fdab8f8839a8144a99a62f587a4570fbba696</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.AdobeShockwavePlayer.munki</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/AdobeShockwavePlayer/AdobeShockwavePlayer.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>bd1a3075a52242fe92766d525830a83b042b17136bd2e67dc8447bc5b1f4f53c</string>
+			</dict>
+			<key>com.github.jleggat.download.AdobeShockwavePlayer</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/AdobeShockwavePlayer/AdobeShockwavePlayer.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>b754bf09b28fdb8ed59eb2d71e0bdc3d53d7c27c0d71885108710603f7a2a132</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

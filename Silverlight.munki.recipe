@@ -34,12 +34,12 @@
 			<string>Microsoft</string>
 			<key>display_name</key>
 			<string>Microsoft Silverlight</string>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
 			<key>minimum_os_version</key>
 			<string>10.7</string>
+			<key>name</key>
+			<string>%NAME%</string>
 			<key>notes</key>
 			<string>usage: managed/optional_installs, managed_updates
 other info: only supported on 10.7+ since early 2014: https://www.microsoft.com/getsilverlight/locale/en-us/html/installation-win-SL5.html
@@ -48,5 +48,31 @@ source: AutoPkg (com.github.autopkg.munki.Silverlight)</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.munki.Silverlight</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.Silverlight</key>
+			<dict>
+				<key>git_hash</key>
+				<string>8958ead0cda7264101e339a5eba318a2f407e20a</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Silverlight/Silverlight.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>13d6bfcdea65f1383dd6edb4ad0f3d5b810f12bafc0d1ea3ddd32abfad8528d2</string>
+			</dict>
+			<key>com.github.autopkg.munki.Silverlight</key>
+			<dict>
+				<key>git_hash</key>
+				<string>423bd68ebbfc17689e4420dab2e9acfa9b6c0505</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Silverlight/Silverlight.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>37216c9bd28abade3e0897d28ef855da2ea19cee28f811840be3d615e925c019</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

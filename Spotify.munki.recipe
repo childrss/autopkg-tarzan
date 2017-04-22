@@ -16,13 +16,39 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.munki.Spotify</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.Spotify</key>
+			<dict>
+				<key>git_hash</key>
+				<string>3feff5e323d1caae2b1b8c5eef3722e7b52e07f9</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Spotify/Spotify.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>78b4aa01b807ae0fe6c190b4837f89a77cd38044bf236204c469777cdac5a44f</string>
+			</dict>
+			<key>com.github.autopkg.munki.Spotify</key>
+			<dict>
+				<key>git_hash</key>
+				<string>4e0ae4ad42d40ab2f320b9511d98439b50657c63</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Spotify/Spotify.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>438b578b775c997541eeb6070e0808ab236751c3eec1c9ef3edb12f435cd2257</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

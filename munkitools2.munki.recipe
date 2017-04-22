@@ -41,5 +41,22 @@
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.munki.munkitools2</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.munki.munkitools2</key>
+			<dict>
+				<key>git_hash</key>
+				<string>13b4be082f08bca1f6fd07479348526632f08c7a</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/munkitools/munkitools2.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>20140a474cb57116a8a11520707813fc1a008f2d5bdba59c81551777b1962dfa</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

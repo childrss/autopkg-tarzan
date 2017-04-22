@@ -40,5 +40,27 @@ manual edits: check minimum_os_version, make sure uninstalls cleanly/update post
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.joshua-d-miller.autopkg.munki.MacTeX</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.joshua-d-miller.autopkg.munki.MacTeX</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.joshua-d-miller-recipes/MacTeX/mactex.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>d3c53c60d9268b26727f790c713bf2628db931d293831d6f7fe3c81be379f1a5</string>
+			</dict>
+			<key>com.github.joshua-d-miller.download.MacTeX</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.joshua-d-miller-recipes/MacTeX/mactex.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>d1ba8aae93894eb55155eac6d2421ca8cd656be707888a8cd2a28f08b897ec35</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -16,13 +16,35 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.recipes-dankeller.munki.google-drive</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.recipes-dankeller.download.google-drive</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.dankeller-recipes/GoogleDrive/GoogleDrive.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>aa562b3d69489b45660b6175d8824ec10804889b5268260d2633ece021955180</string>
+			</dict>
+			<key>com.github.autopkg.recipes-dankeller.munki.google-drive</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.dankeller-recipes/GoogleDrive/GoogleDrive.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>cce1c27048619ab8a82578b4968a05a6929f880ccaac61af6a2813f6a8095276</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -28,17 +28,47 @@
 			<string>The Apache Software Foundation</string>
 			<key>display_name</key>
 			<string>Open Office</string>
+			<key>icon_name</key>
+			<string>global/%NAME%.png</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>notes</key>
 			<string>usage: managed/optional_installs, managed_updates
 other info:
 source: AutoPkg (io.github.hjuutilainen.munki.OpenOffice)</string>
-			<key>icon_name</key>
-			<string>global/%NAME%.png</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.munki.OpenOffice</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>OpenOfficeURLProvider</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/OpenOffice/OpenOfficeURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>bb4ff833bf4019f0515253f9d404646cb43da95c3338cfbac30deed484aa1591</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>io.github.hjuutilainen.download.OpenOffice</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/OpenOffice/OpenOffice.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>e0afe185d1af21e76da2c81be4546b9f50dccc77d837dd46406e941b3594cad0</string>
+			</dict>
+			<key>io.github.hjuutilainen.munki.OpenOffice</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/OpenOffice/OpenOffice.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>c90ae19c6f7b65bd467fd5921065abc917cbb86cf4e36c92b4afe1f1262a60ae</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

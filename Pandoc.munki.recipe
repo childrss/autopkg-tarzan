@@ -39,13 +39,31 @@
 other info: This is a command-line tool that installs in /usr/local/bin.
 source: AutoPkg (com.github.jleggat.munki.pandoc)
 manual edits: installs key, version number</string>
-<!-- 
-			<key>unattended_install</key>
-			<true/>
- -->
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.munki.pandoc</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.download.pandoc</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Pandoc/Pandoc.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>86c5736a2b406d98bf731bc045409b1aa58ea93d7f2774972f85e9b0f5e5102e</string>
+			</dict>
+			<key>com.github.jleggat.munki.pandoc</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Pandoc/Pandoc.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>1ebbcda053358b51e22af951672d9ccab56d5f39901e93dc260224f66c5edb85</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

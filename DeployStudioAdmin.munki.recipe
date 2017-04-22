@@ -16,13 +16,43 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.jaharmi.munki.DeployStudioAdmin</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>DeployStudioURLProvider</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jaharmi-recipes/DeployStudio/DeployStudioURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>63cb104f6af10e5d77dbcceee575d55175384ae372560efa528a982753211db8</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jaharmi.download.DeployStudio</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jaharmi-recipes/DeployStudio/DeployStudio.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c0c399313cf720eadaa57b3cbfb6950d658f7658ed3b45c8d02a34e2e2730f98</string>
+			</dict>
+			<key>com.github.jaharmi.munki.DeployStudioAdmin</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jaharmi-recipes/DeployStudio/DeployStudioAdmin.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>db6f5ce1aec70e88d4bf0295dfe161cef32638b0dec3bbe5bc1cd9ebb1b1662c</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

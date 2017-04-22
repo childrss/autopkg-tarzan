@@ -58,5 +58,35 @@ manual edits: installs key type = bundle (to distinguish from older major versio
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.joshua-d-miller.autopkg.munki.AdobeAcrobatDCUpdate</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>AdobeAcrobatDcUpdateInfoProvider</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.novaksam-recipes/Recipes - Download/AdobeAcrobatDcUpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>5916e8671fdc087df9c100b3d80da369ad18af9a30f011fc77e4b952afb5d83a</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.joshua-d-miller.autopkg.munki.AdobeAcrobatDCUpdate</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.joshua-d-miller-recipes/Adobe/AdobeAcrobatDCUpdate.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>37ac0de0b7f703aa121dbfe0e21a55700ae6e84b3494c36f4cd839fc42aef5d9</string>
+			</dict>
+			<key>com.github.novaksam.download.AdobeAcrobatDCUpdate</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.novaksam-recipes/Recipes - Download/AdobeAcrobatDCUpdates.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>6d5845aa76b42b35b0ae840a0e10f6d7bfacfc3226f3c2d05369a0c4b6c132fc</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

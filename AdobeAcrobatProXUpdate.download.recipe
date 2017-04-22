@@ -18,13 +18,40 @@
 			<array>
 				<string>global_free_raw</string>
 			</array>
-			<key>name</key>
-			<string>%NAME%</string>
 			<key>icon_name</key>
 			<string>global/%NAME%</string>
+			<key>name</key>
+			<string>%NAME%</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.AdobeAcrobatProXUpdate</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>AdobeAcrobatProUpdateInfoProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>cc1f09f45a5a5ba1c4d26bbb8bae2c76582886a9</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/AdobeAcrobatPro/AdobeAcrobatProUpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>25348b0774f7846a26119e5d99dd53a2c93f1f6bb153f9aa4e5a93c4ec369848</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.AdobeAcrobatProXUpdate</key>
+			<dict>
+				<key>git_hash</key>
+				<string>cc1f09f45a5a5ba1c4d26bbb8bae2c76582886a9</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/AdobeAcrobatPro/AdobeAcrobatProXUpdate.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c6f46257961345740a620f73a9c35ccc3c98c13882bbdbcb55d427edc4b9ec5b</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

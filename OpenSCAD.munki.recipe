@@ -39,5 +39,27 @@ manual edits: check minimum_os_version against website</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.jps3.munki.OpenSCAD</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jps3.download.OpenSCAD</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jps3-recipes/OpenSCAD/OpenSCAD.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>612383d68d0dd48de32545efa99d687cc9b0c8ef6966457e10ffec28147ace7b</string>
+			</dict>
+			<key>com.github.jps3.munki.OpenSCAD</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.jps3-recipes/OpenSCAD/OpenSCAD.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>006fab0f32c4136b4a47f185b9b2e216f81a2574ccaa3a89316869bf5f1ad5c3</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

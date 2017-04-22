@@ -41,17 +41,6 @@
 			<string>usage: managed/optional_installs, managed_updates
 other info:
 source: AutoPkg (com.github.joshua-d-miller.autopkg.munki.zotero)</string>
-<!-- 
-			<key>postinstall_script</key>
-			<string>#!/bin/bash
-            # Mircosoft Word 2011 Plugin for Zotero
-            # Last Updated April 10, 2014 - Joshua D. Miller
-            # Set Permissions to allow the Zotero Word Plugin to Install
-            if [ -e /Applications/Microsoft\ Office\ 2011/ ]; then
-				chmod -R o+w /Applications/Microsoft\ Office\ 2011/Office/Startup/Word
-			fi
-            </string>
--->
 			<key>postinstall_script</key>
 			<string>#!/bin/bash
 					# Permissions change for Word 2011 template for Zotero
@@ -64,21 +53,6 @@ source: AutoPkg (com.github.joshua-d-miller.autopkg.munki.zotero)</string>
 						fi
 					fi
 			</string>
-<!--
-			<key>postuninstall_script</key>
-			<string>#!/bin/bash
-            # Uninstall Script for Word Plugin for Zotero
-            # Last Updated April 10, 2014 - Joshua D. Miller
-            # Remove the Zotero Template file
-            if [ -e /Applications/Microsoft\ Office\ 2011/Office/Word/Startup/Zotero.dot ]; then
-				rm /Applications/Microsoft\ Office\ 2011/Office/Startup/Word/Zotero.dot
-			fi
-            # Restore Permissions on the folder /Applications/Microsoft Office 2011/Office/Startup/Word/
-            if [ -e /Applications/Microsoft\ Office\ 2011/ ]; then
-            	chmod -R o-w /Applications/Microsoft\ Office\ 2011/Office/Startup/Word
-			fi
-            </string>
- -->
 			<key>postuninstall_script</key>
 			<string>#!/bin/bash
 					# Uninstall Script for Word Plugin for Zotero
@@ -88,13 +62,31 @@ source: AutoPkg (com.github.joshua-d-miller.autopkg.munki.zotero)</string>
 						rm /Applications/Microsoft\ Office\ 2011/Office/Startup/Word/Zotero.dot
 					fi
 			</string>
-<!-- 
-			<key>unattended_install</key>
-			<true/>
- -->
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.joshua-d-miller.autopkg.munki.zotero</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.joshua-d-miller.autopkg.munki.zotero</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.joshua-d-miller-recipes/Zotero/Zotero.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>856bb90da612bb6733b9efa0c6a1be2a57b1ede33ac3ece545111329c31767cd</string>
+			</dict>
+			<key>com.github.joshua-d-miller.download.zotero</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/Jenkins/Library/AutoPkg/RecipeRepos/com.github.autopkg.joshua-d-miller-recipes/Zotero/Zotero.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c30692e8a5185676e1ee4f7822504279330e779cb8086858055152158e42500a</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -34,11 +34,47 @@ source: AutoPkg (com.github.autopkg.munki.Office2011Updates)</string>
 			<string>microsoft_office_2011_update-14.1.0</string>
 			<key>update_for</key>
 			<array>
-			  <string>microsoft_office_2011_license</string>
+				<string>microsoft_office_2011_license</string>
 			</array>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.munki.Office2011Updates</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>MSOffice2011UpdateInfoProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>6dc54404bb31673f5c3ef556fb8af2bcd2c4d8c1</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOffice2011UpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>b45b1273ec683eb42ad7cc014d370a837191fe9f6a92ca354f226166b6bde67f</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.Office2011Updates</key>
+			<dict>
+				<key>git_hash</key>
+				<string>a84c8c3ad6da7b43ccf3cb2749ebb93ca7be6839</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOffice2011Updates.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>b07eb960132d628098752ae0101d8f2a64370cd8279b10370db17debc046c1eb</string>
+			</dict>
+			<key>com.github.autopkg.munki.Office2011Updates</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ec1558722db33605b417f11ac0537727556b6169</string>
+				<key>path</key>
+				<string>/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOffice2011Updates.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>29b2286f499edb5a99c1ed84927183ebf5d7ad317314de3b3c55f2eb8e575487</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>
